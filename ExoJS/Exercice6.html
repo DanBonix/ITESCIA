@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercice 6</title>
+
+	<meta charset="utf-8">
+</head>
+<body>
+	<form name="form" action="" method="">
+		<select id="pays" name="pays" size="1" onchange="capitale()">
+			<optgroup label="Europe">
+				<option value="Paris">France</option>
+				<option value="Madrid">Espagne</option>
+			</optgroup>
+
+			<optgroup label="Amérique">
+				<option value="Toronto">Canada</option>
+				<option value="Washington">Etats-Unis</option>
+			</optgroup>
+
+			<optgroup label="Afrique">
+				<option value="Alger">Algérie</option>
+				<option value="Tunis">Tunisie</option>
+			</optgroup>
+
+			<optgroup label="Asie">
+				<option value="Tokyo">Japon</option>
+				<option value="Pékin">Chine</option>
+			</optgroup>
+
+			<optgroup label="Océanie">
+				<option value="Canberra">Australie</option>
+				<option value="Wellington">Nouvelle-Zélande</option>
+			</optgroup>
+		</select>
+
+		<input type="text" id="capitale" name="capitale">
+		<script type="text/javascript">
+			function capitale() {
+				var pays = document.getElementById("pays");
+				var capitale = document.getElementById("capitale");
+
+				capitale.value = pays[pays.selectedIndex].value;
+			}
+
+		</script>
+	</form>
+</body>
+</html>

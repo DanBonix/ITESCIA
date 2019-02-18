@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercice 5</title>
+	<meta charset="utf-8">
+
+	<style type="text/css">
+		table, td, th { border:1px solid black; border-collapse: collapse; text-align: center;}
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+		function compare(value) {
+			document.writeln('La valeur choisie est ' + value + '. <br>')
+			if (value < 10) {
+				document.writeln(value + ' est inférieur à 10');
+			}
+
+			else if (value = 10) {
+				document.writeln(value + ' est égal à 10');
+			}
+
+			else {
+				document.writeln(value + ' est supérieur à 10');
+			}
+
+			document.writeln('<br><br>');
+		}
+
+		function tableau() {
+			document.writeln('<table>');
+			for($z = 1; $z <= 10; $z++)
+			{
+				document.writeln('<tr>');
+
+				for($y = 1; $y <= 10; $y++) {
+					document.writeln('<td>' + $z + ', ' + $y + '</td>');
+				}
+
+				document.writeln('</tr>');
+			}
+		}
+		compare(5);
+		tableau();
+	</script>
+</body>
+</html>
